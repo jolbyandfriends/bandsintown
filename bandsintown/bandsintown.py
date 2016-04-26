@@ -1,9 +1,9 @@
 import os
 
-from bandsintown.client import Client
-from bandsintown.objects import Artist
-from bandsintown.objects import Event
-from bandsintown.objects import Venue
+from .client import Client
+from .objects import Artist
+from .objects import Event
+from .objects import Venue
 
 
 class Bandsintown(Client):
