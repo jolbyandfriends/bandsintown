@@ -26,6 +26,11 @@ class Venue:
 
     def __str__(self):
         return self.name
+    
+    @property
+    def google_maps_url(self):
+        query = "{},{},{}".format(self.name, self.city, self.region)
+        return "http://maps.google.com/?q={}&ll={},{}".format(urlencode(query), self.longitude, self.latitude)
 
 
 class Event:
