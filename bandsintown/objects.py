@@ -34,7 +34,7 @@ class Venue:
     @property
     def google_maps_url(self):
         params = {
-            "q": "{},{},{}".format(self.name, self.city, self.region),
+            "q": "{},{},{}".format(self.place, self.city, self.region),
             "ll": "{},{}".format(self.longitude, self.latitude),
         }
         return "http://maps.google.com/?{}".format(urlencode(params))
