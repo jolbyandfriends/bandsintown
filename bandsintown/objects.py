@@ -1,5 +1,9 @@
 import dateutil.parser
 
+try:
+    from urllib.parse import urlencode
+except ImportError:
+    from urllib import urlencode
 
 class Artist:
     def __init__(self, data):
