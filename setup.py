@@ -17,5 +17,5 @@ setup(
         "Programming Language :: Python :: 3.4",
     ],
     license='MIT',
-    install_requires=['requests<3'],
+    install_requires=['requests<3', 'python-dateutil>=2.5.3'],
 )
