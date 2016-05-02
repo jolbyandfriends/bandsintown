@@ -34,6 +34,8 @@ class Bandsintown(Client):
             client.get(mbid='149e6720-4e4a-41a4-afca-6d29083fc091')
         """
         data = super(Bandsintown, self).get(*args, **kwargs)
+        if 'errors' in data:
+            return None
         return Artist(data)
 
 
@@ -62,6 +64,8 @@ class Bandsintown(Client):
             client.events('Bad Religion', location='Portland,OR')
         """
         data = super(Bandsintown, self).events(*args, **kwargs)
+        if 'errors' in data:
+            return None
         return self._json_to_events(data)
 
 
@@ -94,6 +98,8 @@ class Bandsintown(Client):
                     - A date range string in the format: yyyy-mm-dd,yyyy-mm-dd
         """
         data = super(Bandsintown, self).search(*args, **kwargs)
+        if 'errors' in data:
+            return None
         return self._json_to_events(data)
 
     
@@ -130,6 +136,8 @@ class Bandsintown(Client):
                 artist's events are included along with the recommended ones
         """
         data = super(Bandsintown, self).recommended(*args, **kwargs)
+        if 'errors' in data:
+            return None
         return self._json_to_events(data)
 
 

@@ -11,6 +11,7 @@ class Artist:
         self.image_url = data.get('image_url')
         self.thumb_url = data.get('thumb_url')
         self.facebook_tour_dates_url = data.get('facebook_tour_dates_url')
+        self.facebook_page_url = data.get('facebook_page_url')
         self.mbid = data.get('mbid')
         self.upcoming_events_count = data.get('upcoming_events_count')
         self.tracker_count = data.get('tracker_count')
