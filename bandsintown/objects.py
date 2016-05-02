@@ -46,7 +46,7 @@ class Event:
     def __init__(self, data):
         self.id = data.get('id')
         self.title = data.get('title')
-        self.datetime = data.get('datetime')
+        self.datetime = dateutil.parser.parse(self.datetime)
         self.formatted_datetime = data.get('formatted_datetime')
         self.formatted_location = data.get('location')
         self.ticket_url = data.get('ticket_url')
@@ -64,8 +64,7 @@ class Event:
 
     @property
     def strftime(self, format='%b %d'):
-       date = dateutil.parser.parse(self.datetime) 
-       return date.strftime(format)
+       return self.datetime.strftime(format)
 
     def __str__(self):
         return self.title
