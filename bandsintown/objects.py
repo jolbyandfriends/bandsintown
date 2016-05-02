@@ -27,6 +27,7 @@ class Venue:
         self.place = data.get('place')
         self.city = data.get('city')
         self.region = data.get('region')
+        self.country = data.get('country')
         self.latitude = data.get('latitude')
         self.longitude = data.get('longitude')
 
