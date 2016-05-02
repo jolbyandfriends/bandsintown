@@ -46,7 +46,7 @@ class Event:
     def __init__(self, data):
         self.id = data.get('id')
         self.title = data.get('title')
-        self.datetime = dateutil.parser.parse(self.datetime)
+        self.datetime = dateutil.parser.parse(data.get('datetime'))
         self.formatted_datetime = data.get('formatted_datetime')
         self.formatted_location = data.get('location')
         self.ticket_url = data.get('ticket_url')
