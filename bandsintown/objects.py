@@ -15,6 +15,7 @@ class Artist:
         self.mbid = data.get('mbid')
         self.upcoming_events_count = data.get('upcoming_events_count')
         self.tracker_count = data.get('tracker_count')
+        self.website = data.get('website')
 
     def __str__(self):
         return self.name
